@@ -17,13 +17,13 @@ func HelloHTTP(w http.ResponseWriter, r *http.Request) {
 		Name string `json:"name"`
 	}
 	if err := json.NewDecoder(r.Body).Decode(&d); err != nil {
-		fmt.Fprintf(w, "Hello, world!")
+		fmt.Fprintf(w, "Hello, again world!")
 		return
 	}
 	if d.Name == "" {
-		fmt.Fprintf(w, "Hello, world!")
+		fmt.Fprintf(w, "Hello, again world!")
 		return
 	}
-	fmt.Fprintf(w, "Hello, %s", html.EscapeString(d.Name))
+	fmt.Fprintf(w, "Hello again, %s", html.EscapeString(d.Name))
 	return
 }
