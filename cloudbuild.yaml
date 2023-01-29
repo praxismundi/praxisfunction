@@ -6,6 +6,6 @@ steps:
       - deploy
       - HelloHTTP
       - --region=us-central1
-      - --source .
+      - --source=.
       - --trigger-http
-      - --runtime go119
+      - --runtime=go119
